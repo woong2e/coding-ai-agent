@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: vibe-coding
+
+  main:
+    web-application-type: none
+    ai:
+      openai:
+        api-key: ${GEMINI_API_KEY}
+        base-url: https://generativelanguage.googleapis.com/v1beta/openai/
+        chat:
+          options:
+            model: gemini-2.5-pro
+            temperature: 0.2
+      anthropic:
+        api-key: ${CLAUDE_API_KEY}
+        chat:
+          options:
+            model: claude-3-7-sonnet-latest
+            temperature: 0.0
