@@ -82,7 +82,7 @@ class VibeCodingAgentService(
             .system(systemPrompt)
             .user(currentInput)
             .advisors(
-                MessageChatMemoryAdvisor(chatMemory, currentConversationId, 100),
+                MessageChatMemoryAdvisor(chatMemory, currentConversationId, 20),
                 loggingAdvisor
             )
             .functions("readFile", "writeCodeToFile", "executeShellCommand")
